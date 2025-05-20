@@ -24,3 +24,18 @@ def game():
     chances = 6
 
     wrong_letter = []
+    while chances > 0:
+        print(" ".join(discovered_letter))
+        print(f"\n Remaining chances: {chances}")
+        print("Wrong letters: ", " ".join(wrong_letter))
+        tries = input("\nType a letter: ").lower()
+
+        if tries in word:
+            i = 0
+            for letter in word:
+                if tries == letter:
+                    discovered_letter[i] = letter
+                i += 1
+        else:
+            chances -= 1
+            wrong_letter.append(tries)
