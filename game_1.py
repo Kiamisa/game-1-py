@@ -7,8 +7,6 @@ def clear_all():
     else:
         _ = system('clear')
 
-clear_all()
-
 def game():
 
     clear_all()
@@ -24,6 +22,7 @@ def game():
     chances = 6
 
     wrong_letter = []
+
     while chances > 0:
         print(" ".join(discovered_letter))
         print(f"\n Remaining chances: {chances}")
@@ -39,8 +38,10 @@ def game():
         else:
             chances -= 1
             wrong_letter.append(tries)
+
         if "_" not in discovered_letter:
             print(f"\n You win!! The word is {word}")
             break
+
 if __name__ == "__main__":
     game()
