@@ -39,3 +39,8 @@ def game():
         else:
             chances -= 1
             wrong_letter.append(tries)
+        if "_" not in discovered_letter:
+            print(f"\n You win!! The word is {word}")
+            break
+if __name__ == "__main__":
+    game()
